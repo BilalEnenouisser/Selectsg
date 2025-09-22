@@ -11,19 +11,8 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Custom Fonts -->
-    <style>
-        @font-face {
-            font-family: 'AvenirHeavy';
-            src: url('./assets/fonts/AvenirHeavy.ttf') format('truetype');
-            
-            font-style: normal;
-        }
-        
-        .avenir-heavy {
-            font-family: 'AvenirHeavy', Arial, sans-serif;
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
     
     <!-- Tailwind Custom Configuration -->
     <script>
@@ -46,7 +35,7 @@
                 <!-- Left Section: Logo + Navigation Menu -->
                 <div class="hidden lg:flex items-center space-x-8">
                     <!-- Logo Image -->
-                    <img src="./assets/Logo.png" alt="Select Sand & Gravel Logo" class="h-10 w-auto object-contain">
+                    <img src="./assets/navandfooter/Logo.png" alt="Select Sand & Gravel Logo" class="h-10 w-auto object-contain">
                     
                     <!-- Home -->
                     <a href="#" class="text-red-600 hover:text-red-700 transition-colors duration-200 avenir-heavy text-xs">
@@ -131,6 +120,11 @@
                     </button>
                 </div>
 
+                <!-- Mobile Logo (visible on mobile) -->
+                <div class="lg:hidden flex items-center">
+                    <img src="./assets/navandfooter/Logo.png" alt="Select Sand & Gravel Logo" class="h-8 w-auto object-contain">
+                </div>
+
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden">
                     <button id="mobile-menu-button" class="text-gray-700 hover:text-red-600 focus:outline-none focus:text-red-600">
@@ -144,15 +138,66 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="lg:hidden hidden">
                 <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">HOME</a>
-                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">PRODUCTS</a>
-                    <a href="#" class="block px-3 py-2 text-base font-medium text-red-600 hover:text-red-700 hover:bg-gray-50 avenir-heavy">LOCATIONS</a>
-                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">ABOUT US</a>
+                    <!-- Home -->
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-red-600 hover:text-red-700 hover:bg-gray-50 avenir-heavy">HOME</a>
+                    
+                    <!-- Products Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy flex items-center justify-between">
+                            PRODUCTS
+                            <svg class="h-4 w-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4">
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-gray-50 avenir-heavy">Sand Products</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-gray-50 avenir-heavy">Gravel Products</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-gray-50 avenir-heavy">Specialty Materials</a>
+                        </div>
+                    </div>
+
+                    <!-- Locations Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy flex items-center justify-between">
+                            LOCATIONS
+                            <svg class="h-4 w-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4">
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-gray-50 avenir-heavy">Main Office</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-gray-50 avenir-heavy">Branch Locations</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-gray-50 avenir-heavy">Service Areas</a>
+                        </div>
+                    </div>
+
+                    <!-- About Us Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy flex items-center justify-between">
+                            ABOUT US
+                            <svg class="h-4 w-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4">
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-gray-50 avenir-heavy">Our Story</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-gray-50 avenir-heavy">Leadership Team</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-gray-50 avenir-heavy">Company Values</a>
+                        </div>
+                    </div>
+
+                    <!-- Partners -->
                     <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">PARTNERS</a>
+                    
+                    <!-- Flagship Projects -->
                     <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">FLAGSHIP PROJECTS</a>
+                    
+                    <!-- News -->
                     <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">NEWS</a>
+                    
+                    <!-- Contact Us Button -->
                     <div class="pt-4">
-                        <button class="w-full bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors duration-200 avenir-heavy text-sm">
+                        <button class="w-full bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors duration-200 avenir-heavy text-sm" style="letter-spacing: 1.3px;">
                             CONTACT US
                         </button>
                     </div>
@@ -169,12 +214,7 @@
         </div>
     </main>
 
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

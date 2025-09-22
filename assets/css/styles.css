@@ -1,0 +1,10 @@
+/* Custom Fonts */
+@font-face {
+    font-family: 'AvenirHeavy';
+    src: url('../assets/fonts/AvenirHeavy.ttf') format('truetype');
+    font-style: normal;
+}
+
+.avenir-heavy {
+    font-family: 'AvenirHeavy', Arial, sans-serif;
+}

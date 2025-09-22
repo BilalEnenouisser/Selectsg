@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Select Sand & Gravel - Employee-owned company providing quality sand and gravel products and services">
+    <meta name="keywords" content="sand, gravel, construction materials, employee-owned, quality products">
+    <meta name="author" content="Select Sand & Gravel">
+    <title>Select Sand & Gravel - Employee-Owned Company</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Fonts -->
+    <style>
+        @font-face {
+            font-family: 'AvenirHeavy';
+            src: url('./assets/fonts/AvenirHeavy.ttf') format('truetype');
+            
+            font-style: normal;
+        }
+        
+        .avenir-heavy {
+            font-family: 'AvenirHeavy', Arial, sans-serif;
+        }
+    </style>
+    
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'avenir': ['AvenirHeavy', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Left Section: Logo + Navigation Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <!-- Logo Image -->
+                    <img src="./assets/Logo.png" alt="Select Sand & Gravel Logo" class="h-10 w-auto object-contain">
+                    
+                    <!-- Home -->
+                    <a href="#" class="text-red-600 hover:text-red-700 transition-colors duration-200 avenir-heavy text-xs">
+                        HOME
+                    </a>
+
+                    <!-- Products Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-red-600 transition-colors duration-200 avenir-heavy text-xs">
+                            PRODUCTS
+                            <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-600 avenir-heavy">Sand Products</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-600 avenir-heavy">Gravel Products</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-600 avenir-heavy">Specialty Materials</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Locations Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-red-600 transition-colors duration-200 avenir-heavy text-xs">
+                            LOCATIONS
+                            <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-600 avenir-heavy">Main Office</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-600 avenir-heavy">Branch Locations</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-600 avenir-heavy">Service Areas</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Us Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-red-600 transition-colors duration-200 avenir-heavy text-xs">
+                            ABOUT US
+                            <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-600 avenir-heavy">Our Story</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-600 avenir-heavy">Leadership Team</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-600 avenir-heavy">Company Values</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partners -->
+                    <a href="#" class="text-gray-700 hover:text-red-600 transition-colors duration-200 avenir-heavy text-xs">
+                        PARTNERS
+                    </a>
+                </div>
+
+                <!-- Right Navigation Menu (near Contact Us) -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <!-- Flagship Projects -->
+                    <a href="#" class="text-gray-700 hover:text-red-600 transition-colors duration-200 avenir-heavy text-xs">
+                        FLAGSHIP PROJECTS
+                    </a>
+
+                    <!-- News -->
+                    <a href="#" class="text-gray-700 hover:text-red-600 transition-colors duration-200 avenir-heavy text-xs">
+                        NEWS
+                    </a>
+
+                    <!-- Contact Us Button -->
+                    <button class="bg-black text-white px-8 py-4 hover:bg-gray-800 transition-colors duration-200 avenir-heavy text-sm" style="letter-spacing: 1.3px;">
+                        CONTACT US
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-red-600 focus:outline-none focus:text-red-600">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">HOME</a>
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">PRODUCTS</a>
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-red-600 hover:text-red-700 hover:bg-gray-50 avenir-heavy">LOCATIONS</a>
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">ABOUT US</a>
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">PARTNERS</a>
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">FLAGSHIP PROJECTS</a>
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 avenir-heavy">NEWS</a>
+                    <div class="pt-4">
+                        <button class="w-full bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors duration-200 avenir-heavy text-sm">
+                            CONTACT US
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section Placeholder -->
+        <div class="bg-gray-100 h-96 flex items-center justify-center">
+            <h2 class="text-3xl  text-gray-800 avenir-heavy">Welcome to Select Sand & Gravel</h2>
+        </div>
+    </main>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,10 +1,40 @@
 /* Custom Fonts */
 @font-face {
     font-family: 'AvenirHeavy';
-    src: url('../assets/fonts/AvenirHeavy.ttf') format('truetype');
+    src: url('/assets/fonts/AvenirHeavy.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirMedium';
+    src: url('/assets/fonts/AvenirMedium.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirRegular';
+    src: url('/assets/fonts/AvenirRegular.ttf') format('truetype');
     font-style: normal;
 }
 
 .avenir-heavy {
     font-family: 'AvenirHeavy', Arial, sans-serif;
+}
+
+.avenir-medium {
+    font-family: 'AvenirMedium', Arial, sans-serif;
+}
+
+.avenir-regular {
+    font-family: 'AvenirRegular', Arial, sans-serif;
+}
+
+/* Service arrow hover effect */
+.service-arrow {
+    filter: brightness(0);
+    transition: filter 0.3s ease;
+}
+
+.service-arrow:hover {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(94%) saturate(7151%) hue-rotate(0deg) brightness(91%) contrast(101%);
 }

@@ -38,3 +38,60 @@
 .service-arrow:hover {
     filter: brightness(0) saturate(100%) invert(13%) sepia(94%) saturate(7151%) hue-rotate(0deg) brightness(91%) contrast(101%);
 }
+
+/* Swiper Custom Styles */
+.projects-swiper {
+    padding-bottom: 60px;
+}
+
+/* Custom Line-style Pagination */
+.projects-pagination {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 30px;
+}
+
+.projects-pagination .swiper-pagination-bullet {
+    width: 30px !important;
+    height: 3px !important;
+    border-radius: 0 !important;
+    background: #d1d5db !important;
+    opacity: 1 !important;
+    margin: 0 5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.projects-pagination .swiper-pagination-bullet-active {
+    background: #374151 !important;
+    width: 50px !important;
+    transform: scaleY(1.2) !important;
+}
+
+/* Custom Navigation Arrows */
+.projects-next,
+.projects-prev {
+    position: relative !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: transparent !important;
+    border: none !important;
+    color: #374151 !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+
+.projects-next:hover,
+.projects-prev:hover {
+    background: transparent !important;
+    color: #1f2937 !important;
+}
+
+.projects-next::after,
+.projects-prev::after {
+    display: none !important;
+}

@@ -101,3 +101,41 @@
 .projects-prev::after {
     display: none !important;
 }
+
+/* Mobile Hero Section Adjustments */
+@media (max-width: 1023px) {
+    .hero-section {
+        height: 70vh !important;
+        min-height: 500px;
+    }
+    
+    .hero-content {
+        margin-bottom: 30px;
+    }
+    
+    .hero-text {
+        margin-bottom: 30px;
+    }
+    
+    .hero-content .flex-1 {
+        align-items: flex-end !important;
+    }
+}
+
+/* Mobile Call to Action Section Adjustments */
+@media (max-width: 1023px) {
+    .call-to-action-headline {
+        font-size: 20px !important;
+        line-height: 1.2 !important;
+    }
+    
+    .call-to-action-secondary {
+        font-size: 18px !important;
+    }
+    
+    .call-now-button {
+        white-space: nowrap !important;
+        font-size: 12px !important;
+        padding: 18px 70px !important;
+    }
+}

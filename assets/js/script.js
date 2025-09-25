@@ -110,6 +110,8 @@ function initSwiperResponsive() {
         pagination: {
             el: '.projects-pagination',
             clickable: true,
+            dynamicBullets: true,
+            dynamicMainBullets: window.innerWidth < 1024 ? 5 : 7,
         },
         navigation: {
             nextEl: '.projects-next',
@@ -118,15 +120,24 @@ function initSwiperResponsive() {
         breakpoints: {
             320: {
                 slidesPerView: 1,
-                spaceBetween: 20
+                spaceBetween: 20,
+                pagination: {
+                    dynamicMainBullets: 5,
+                }
             },
             640: {
                 slidesPerView: 2,
-                spaceBetween: 30
+                spaceBetween: 30,
+                pagination: {
+                    dynamicMainBullets: 5,
+                }
             },
             1024: {
                 slidesPerView: 3,
-                spaceBetween: 30
+                spaceBetween: 30,
+                pagination: {
+                    dynamicMainBullets: 7,
+                }
             }
         },
         autoplay: {
@@ -160,6 +171,214 @@ function initLazyLoading() {
     images.forEach(img => imageObserver.observe(img));
 }
 
+// Hero section scroll functionality
+function initHeroScroll() {
+    const scrollButton = document.getElementById('scroll-to-next');
+    const nextSection = document.getElementById('next-section');
+    
+    if (scrollButton && nextSection) {
+        scrollButton.addEventListener('click', function() {
+            nextSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
+}
+
+// Locations tabs functionality
+function initLocationsTabs() {
+    const locationItems = document.querySelectorAll('.location-item');
+    const locationContents = document.querySelectorAll('.location-content');
+    const locationImage = document.getElementById('location-image');
+    
+    // Image mapping
+    const imageMap = {
+        'dallas': 'assets/home/dallas.jpg',
+        'fortworth': 'assets/home/fortworth.jpg',
+        'austin': 'assets/home/austin.jpg',
+        'sanantonio': 'assets/home/sanantonio.jpg',
+        'houston': 'assets/home/houston.jpg',
+        'oklahoma': 'assets/home/oklahoma.jpg'
+    };
+    
+    locationItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const location = this.getAttribute('data-location');
+            
+            // Remove active class from all items
+            locationItems.forEach(loc => {
+                loc.classList.remove('active');
+                const span = loc.querySelector('span');
+                const numberSpan = loc.querySelector('.number');
+                const lineContainer = loc.querySelector('div');
+                
+                // Reset to inactive state
+                if (span) {
+                    span.style.fontSize = '19px';
+                    span.style.color = '#4A4A4A';
+                }
+                
+                // Reset number color to gray
+                if (numberSpan) {
+                    numberSpan.style.color = '#4A4A4A';
+                }
+                
+                // Replace red line with transparent div for inactive items
+                if (lineContainer) {
+                    // Remove any existing image or div
+                    const img = lineContainer.querySelector('img');
+                    const div = lineContainer.querySelector('div');
+                    if (img) {
+                        img.remove();
+                    }
+                    if (div) {
+                        div.remove();
+                    }
+                    // Add transparent div
+                    lineContainer.insertAdjacentHTML('afterbegin', '<div class="h-8 bg-transparent mr-4" style="width: 8%; margin-left: -32px;"></div>');
+                }
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            const span = this.querySelector('span');
+            const numberSpan = this.querySelector('.number');
+            const lineContainer = this.querySelector('div');
+            
+            // Set active state
+            if (span) {
+                span.style.fontSize = '28px';
+                span.style.color = '#000';
+            }
+            
+            // Set number color to red for active item
+            if (numberSpan) {
+                numberSpan.style.color = '#D80027';
+            }
+            
+            // Add red line SVG for active item
+            if (lineContainer) {
+                // Remove any existing image or div
+                const img = lineContainer.querySelector('img');
+                const div = lineContainer.querySelector('div');
+                if (img) {
+                    img.remove();
+                }
+                if (div) {
+                    div.remove();
+                }
+                // Add red line image
+                lineContainer.insertAdjacentHTML('afterbegin', '<img src="assets/home/redline.svg" alt="Red line" class="h-8 mr-4 cursor-pointer" style="margin-left: -32px; width: 8%;" onclick="event.stopPropagation();">');
+            }
+            
+            // Hide all content first
+            locationContents.forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            // Show selected content
+            const selectedContent = document.getElementById(location + '-content');
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+            
+            // Update image
+            if (locationImage && imageMap[location]) {
+                locationImage.src = imageMap[location];
+                locationImage.alt = location.charAt(0).toUpperCase() + location.slice(1);
+            }
+        });
+    });
+}
+
+// Mobile locations functionality
+function initMobileLocations() {
+    const mobileLocationItems = document.querySelectorAll('.mobile-location-item');
+    const mobileLocationContents = document.querySelectorAll('.mobile-location-content');
+    
+    mobileLocationItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const location = this.getAttribute('data-location');
+            
+            // Remove active class from all items
+            mobileLocationItems.forEach(loc => {
+                loc.classList.remove('active');
+                const span = loc.querySelector('span');
+                const numberSpan = loc.querySelector('.number');
+                const lineContainer = loc.querySelector('div');
+                
+                // Reset to inactive state
+                if (span) {
+                    span.style.color = '#4A4A4A';
+                }
+                
+                // Reset number color to gray
+                if (numberSpan) {
+                    numberSpan.style.color = '#4A4A4A';
+                }
+                
+                // Replace red line with transparent div for inactive items
+                if (lineContainer) {
+                    // Remove any existing image or div
+                    const img = lineContainer.querySelector('img');
+                    const div = lineContainer.querySelector('div');
+                    if (img) {
+                        img.remove();
+                    }
+                    if (div) {
+                        div.remove();
+                    }
+                    // Add transparent div
+                    lineContainer.insertAdjacentHTML('afterbegin', '<div class="w-2 h-6 bg-transparent mr-4"></div>');
+                }
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            const span = this.querySelector('span');
+            const numberSpan = this.querySelector('.number');
+            const lineContainer = this.querySelector('div');
+            
+            // Set active state
+            if (span) {
+                span.style.color = '#000';
+            }
+            
+            // Set number color to red for active item
+            if (numberSpan) {
+                numberSpan.style.color = '#D80027';
+            }
+            
+            // Add red line SVG for active item
+            if (lineContainer) {
+                // Remove any existing image or div
+                const img = lineContainer.querySelector('img');
+                const div = lineContainer.querySelector('div');
+                if (img) {
+                    img.remove();
+                }
+                if (div) {
+                    div.remove();
+                }
+                // Add red line image
+                lineContainer.insertAdjacentHTML('afterbegin', '<img src="assets/home/redline.svg" alt="Red line" class="h-6 mr-4 w-2">');
+            }
+            
+            // Hide all content first
+            mobileLocationContents.forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Show selected content
+            const selectedContent = document.getElementById('mobile-' + location + '-content');
+            if (selectedContent) {
+                selectedContent.classList.remove('hidden');
+            }
+        });
+    });
+}
+
 // Initialize all functionality
 document.addEventListener('DOMContentLoaded', function() {
     smoothScroll();
@@ -168,6 +387,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initSwiperResponsive();
     initParallax();
     initLazyLoading();
+    initHeroScroll();
+    initLocationsTabs();
+    initMobileLocations();
 });
 
 // Add CSS for animations
@@ -193,6 +415,8 @@ style.textContent = `
     .swiper-slide:hover {
         transform: scale(1.02);
     }
+    
+    
     
     @media (max-width: 768px) {
         .hero-section h1 {

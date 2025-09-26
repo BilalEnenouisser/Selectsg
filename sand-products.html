@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Select Sand & Gravel provides high-quality sand, including cushion sand and concrete sand. Perfect for construction, landscaping, and other projects.">
+    <meta name="keywords" content="sand, gravel, construction materials, employee-owned, quality products, Texas">
+    <meta name="author" content="Select Sand & Gravel">
+    <title>Bulk Sand Products | Cushion Sand, Concrete Sand & More</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'avenir': ['AvenirHeavy', 'Arial', 'sans-serif'],
+                        'avenir-heavy': ['AvenirHeavy', 'Arial', 'sans-serif'],
+                        'avenir-medium': ['AvenirMedium', 'Arial', 'sans-serif'],
+                        'avenir-regular': ['AvenirRegular', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-white  ">
+        <div class="max-w-[88%] mx-auto  ">
+            <div class="flex justify-between items-center h-20">
+                <!-- Left Section: Logo + Navigation Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <!-- Logo Image -->
+                    <img src="./assets/navandfooter/Logo.png" alt="Select Sand & Gravel Logo" class="h-10 w-auto object-contain">
+                    
+                    <!-- Home -->
+                    <a href="index.html" class="text-gray-700 hover:text-red-700 transition-colors duration-200 avenir-heavy text-xs">
+                        HOME
+                    </a>
+
+                    <!-- Products Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-[#B20204] hover:text-[#B20204] transition-colors duration-200 avenir-heavy text-xs">
+                            PRODUCTS
+                            <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="sand-products.html" class="block px-4 py-2 text-sm text-[#B20204] hover:bg-gray-50 avenir-heavy">Sand</a>
+                                <a href="gravel-products.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Rock, Crushed Stone, Gravel, Granite Products</a>
+                                <a href="topsoil-products.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Topsoil, Fill Dirt, Sandy Loam Products</a>
+                                <a href="landscape-materials.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Landscaping Rock, Decomposed Granite, River Rock Delivery</a>
+                                <a href="landscape-rock.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Landscape Rock, Gravel, Crushed Stone</a>
+                                <a href="decomposed-granite.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Decomposed Granite, Pathway Materials</a>
+                                <a href="rock.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">River Rock / Decorative Rock</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Locations Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-[#B20204] transition-colors duration-200 avenir-heavy text-xs">
+                            LOCATIONS
+                            <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="sand-and-gravel-dallas-tx.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Dallas</a>
+                                <a href="sand-and-gravel-supplier-fort-worth-tx.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Fort Worth</a>
+                                <a href="sand-and-gravel-austin.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Austin</a>
+                                <a href="sand-and-gravel-san-antonio.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">San Antonio</a>
+                                <a href="sand-and-gravel-houston.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Houston</a>
+                                <a href="sand-and-gravel-oklahoma-city.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Oklahoma</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Us Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-[#B20204] transition-colors duration-200 avenir-heavy text-xs">
+                            ABOUT US
+                            <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Employee Owned</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Team</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#B20204] avenir-heavy">Our Story</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partners -->
+                    <a href="#" class="text-gray-700 hover:text-[#B20204] transition-colors duration-200 avenir-heavy text-xs">
+                        PARTNERS
+                    </a>
+                </div>
+
+                <!-- Right Navigation Menu (near Contact Us) -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <!-- Flagship Projects -->
+                    <a href="#" class="text-gray-700 hover:text-[#B20204] transition-colors duration-200 avenir-heavy text-xs">
+                        FLAGSHIP PROJECTS
+                    </a>
+
+                    <!-- News -->
+                    <a href="#" class="text-gray-700 hover:text-[#B20204] transition-colors duration-200 avenir-heavy text-xs">
+                        NEWS
+                    </a>
+
+                    <!-- Contact Us Button -->
+                    <button class="bg-black text-white border-2 border-black px-8 py-4 hover:bg-white hover:text-[#B20204] transition-all duration-300 avenir-heavy text-sm" style="letter-spacing: 1.3px;">
+                        CONTACT US
+                    </button>
+                </div>
+
+                <!-- Mobile Logo (visible on mobile) -->
+                <div class="lg:hidden flex items-center">
+                    <img src="./assets/navandfooter/Logo.png" alt="Select Sand & Gravel Logo" class="h-8 w-auto object-contain">
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-[#B20204] focus:outline-none focus:text-[#B20204]">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                    <!-- Home -->
+                    <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-700 hover:bg-gray-50 avenir-heavy">HOME</a>
+                    
+                    <!-- Products Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 text-base font-medium text-[#B20204] hover:text-[#B20204] hover:bg-gray-50 avenir-heavy flex items-center justify-between">
+                            PRODUCTS
+                            <svg class="h-4 w-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4">
+                            <a href="sand-products.html" class="block px-3 py-2 text-sm text-[#B20204] hover:bg-gray-50 avenir-heavy">Sand</a>
+                            <a href="gravel-products.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Rock, Crushed Stone, Gravel, Granite Products</a>
+                            <a href="topsoil-products.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Topsoil, Fill Dirt, Sandy Loam Products</a>
+                            <a href="landscape-materials.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Landscaping Rock, Decomposed Granite, River Rock Delivery</a>
+                            <a href="landscape-rock.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Landscape Rock, Gravel, Crushed Stone</a>
+                            <a href="decomposed-granite.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Decomposed Granite, Pathway Materials</a>
+                            <a href="rock.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">River Rock / Decorative Rock</a>
+                        </div>
+                    </div>
+
+                    <!-- Locations Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy flex items-center justify-between">
+                            LOCATIONS
+                            <svg class="h-4 w-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4">
+                            <a href="sand-and-gravel-dallas-tx.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Dallas</a>
+                            <a href="sand-and-gravel-supplier-fort-worth-tx.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Fort Worth</a>
+                            <a href="sand-and-gravel-austin.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Austin</a>
+                            <a href="sand-and-gravel-san-antonio.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">San Antonio</a>
+                            <a href="sand-and-gravel-houston.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Houston</a>
+                            <a href="sand-and-gravel-oklahoma-city.html" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Oklahoma</a>
+                        </div>
+                    </div>
+
+                    <!-- About Us Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy flex items-center justify-between">
+                            ABOUT US
+                            <svg class="h-4 w-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-4">
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Employee Owned</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Team</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">Our Story</a>
+                        </div>
+                    </div>
+
+                    <!-- Partners -->
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">PARTNERS</a>
+                    
+                    <!-- Flagship Projects -->
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">FLAGSHIP PROJECTS</a>
+                    
+                    <!-- News -->
+                    <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#B20204] hover:bg-gray-50 avenir-heavy">NEWS</a>
+                    
+                    <!-- Contact Us Button -->
+                    <div class="pt-4">
+                        <button class="w-full bg-black text-white border-2 border-black px-6 py-3 rounded-md hover:bg-white hover:text-[#B20204] transition-all duration-300 avenir-heavy text-sm" style="letter-spacing: 1.3px;">
+                            CONTACT US
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-white py-16 lg:py-24">
+            <div class="max-w-[88%] mx-auto">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <!-- Left Column - Text Content -->
+                    <div class="w-full lg:w-1/2 pr-0 lg:pr-12 mb-8 lg:mb-0">
+                        <!-- Main Heading -->
+                        <h1 class="avenir-heavy text-black mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style="line-height: 1.1;">
+                            Sand products
+                        </h1>
+                        
+                        <!-- Description -->
+                        <p class="avenir-medium text-black mb-8 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" style="line-height: 1.4;">
+                            Below are sample pictures of the types of Sand products provided by Select Sand & Gravel. We haul sand to the Dallas, Fort Worth, San Antonio, Austin and Houston, Texas areas. For example, we deliver Cushion Sand, Concrete Sand, Brick Sand, Mason Sand, Remix, and Limestone Sand as needed for Residential, Commercial, Industrial sand projects. Additional delivery areas, or specialty sand products (Cement Treated Sand) may be available upon request.
+                        </p>
+                        
+                        <!-- Disclaimer Note -->
+                        <p class="avenir-regular text-[#B20204] text-xs sm:text-sm md:text-base lg:text-lg">
+                            NOTE: Material pictures are a representation only. Exact color, consistency, and gradation may vary.
+                        </p>
+                    </div>
+                    
+                    <!-- Right Column - Hero Image -->
+                    <div class="w-full lg:w-1/2">
+                        <img 
+                            src="assets/product1/hero.jpg" 
+                            alt="Sand products texture and appearance" 
+                            class="w-full h-96 lg:h-[600px] object-cover"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sand Products Grid Section -->
+        <section class="bg-white py-16 lg:py-24">
+            <div class="max-w-[88%] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Column 1 -->
+                    <div class="space-y-24">
+                        <!-- Cushion Sand -->
+                        <div>
+                            <h3 class="avenir-medium text-[#B20204] mb-4" style="font-size: 28px;">Cushion Sand</h3>
+                            <img src="assets/product1/1.jpg" alt="Cushion Sand" class="w-full h-64 object-cover">
+                        </div>
+                        
+                        <!-- Concrete Sand -->
+                        <div>
+                            <h3 class="avenir-medium text-[#B20204] mb-4" style="font-size: 28px;">Concrete Sand</h3>
+                            <img src="assets/product1/2.jpg" alt="Concrete Sand" class="w-full h-64 object-cover">
+                        </div>
+                        
+                        <!-- Crushed Limestone Sand -->
+                        <div>
+                            <h3 class="avenir-medium text-[#B20204] mb-4" style="font-size: 28px;">Crushed Limestone Sand</h3>
+                            <img src="assets/product1/3.jpg" alt="Crushed Limestone Sand" class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div class="space-y-24">
+                        <!-- Brick Sand / Masonry Sand -->
+                        <div>
+                            <h3 class="avenir-medium text-[#B20204] mb-4" style="font-size: 28px;">Brick Sand / Masonry Sand</h3>
+                            <img src="assets/product1/4.jpg" alt="Brick Sand / Masonry Sand" class="w-full h-64 object-cover">
+                        </div>
+                        
+                        <!-- Utility Bedding Sand -->
+                        <div>
+                            <h3 class="avenir-medium text-[#B20204] mb-4" style="font-size: 28px;">Utility Bedding Sand</h3>
+                            <img src="assets/product1/5.jpg" alt="Utility Bedding Sand" class="w-full h-64 object-cover">
+                        </div>
+                        
+                        <!-- Granite Sand (Gray) -->
+                        <div>
+                            <h3 class="avenir-medium text-[#B20204] mb-4" style="font-size: 28px;">Granite Sand (Gray)</h3>
+                            <img src="assets/product1/6.jpg" alt="Granite Sand (Gray)" class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                    
+                    <!-- Column 3 -->
+                    <div class="space-y-24">
+                        <!-- White Brick Sand -->
+                        <div>
+                            <h3 class="avenir-medium text-[#B20204] mb-4" style="font-size: 28px;">White Brick Sand</h3>
+                            <img src="assets/product1/7.jpg" alt="White Brick Sand" class="w-full h-64 object-cover">
+                        </div>
+                        
+                        <!-- Remix (Sand & Gravel Mix) -->
+                        <div>
+                            <h3 class="avenir-medium text-[#B20204] mb-4" style="font-size: 28px;">Remix (Sand & Gravel Mix)</h3>
+                            <img src="assets/product1/8.jpg" alt="Remix (Sand & Gravel Mix)" class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="bg-white py-8 lg:py-16">
+            <div class="max-w-[88%] mx-auto px-4">
+                <div class="bg-white border border-gray-300 rounded-lg p-6 lg:p-12">
+                    <div class="flex flex-col lg:flex-row items-center justify-between">
+                        <!-- Left Side - Text Content -->
+                        <div class="text-center lg:text-left mb-6 lg:mb-0 lg:mr-8">
+                            <h2 class="avenir-heavy text-black mb-4" style="font-size: 28px; line-height: 1.2;">
+                                Contact us to Schedule a Sand <br>Delivery Today!
+                            </h2>
+                            <p class="avenir-medium text-black" style="font-size: 16px;">
+                                Let's talk!
+                            </p>
+                        </div>
+                        
+                        <!-- Right Side - Contact Button -->
+                        <div class="flex items-center">
+                            <button class="bg-black text-white border-2 border-black px-16 lg:px-20 py-3 lg:py-4 hover:bg-white hover:text-black transition-all duration-300 avenir-heavy flex items-center gap-3 group" style="font-size: 16px; letter-spacing: 1.3px;">
+                                CONTACT US
+                                <img src="assets/page1/arrow.svg" alt="Arrow" class="w-4 h-4 brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8 lg:py-16">
+        <div class="max-w-[88%] mx-auto px-4">
+            <!-- Top Section - Three Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-6 lg:mb-8">
+                <!-- Left Column - Payment Methods -->
+                <div>
+                    <h3 class="avenir-heavy mb-4" style="font-size: 11px; color: #7F7F7F;">PAYMENT METHODS</h3>
+                    <p class="avenir-regular text-white mb-4" style="font-size: 17px;">All Major Credit Cards Accepted.</p>
+                    
+                    <!-- Credit Card Logos -->
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="assets/navandfooter/Visa.svg" alt="Visa" class="h-8 w-auto">
+                        <img src="assets/navandfooter/Amex.svg" alt="American Express" class="h-8 w-auto">
+                        <img src="assets/navandfooter/Discover.svg" alt="Discover" class="h-8 w-auto">
+                        <img src="assets/navandfooter/Mastercard.svg" alt="Mastercard" class="h-8 w-auto">
+                    </div>
+                    
+                    <!-- Net 30 Link -->
+                    <a href="#" class="avenir-regular text-white underline hover:text-gray-300 transition-colors duration-200 inline-flex items-center" style="font-size: 18px;">
+                        Net 30 for our Partners
+                        <img src="assets/page1/arrow.svg" alt="Arrow" class="w-4 h-4 ml-2" style="filter: brightness(0) invert(1);">
+                    </a>
+                </div>
+                
+                <!-- Middle Column - Contact Info -->
+                <div>
+                    <h3 class="avenir-heavy mb-4" style="font-size: 11px; color: #7F7F7F;">PHONE</h3>
+                    <a href="tel:817.670.2711" class="avenir-regular text-white underline hover:text-gray-300 transition-colors duration-200 block mb-6" style="font-size: 17px;">817.670.2711</a>
+                    
+                    <h3 class="avenir-heavy mb-4" style="font-size: 11px; color: #7F7F7F;">EMAIL</h3>
+                    <a href="mailto:info@selectsg.com" class="avenir-regular text-white underline hover:text-gray-300 transition-colors duration-200" style="font-size: 17px;">info@selectsg.com</a>
+                </div>
+                
+                <!-- Right Column - Quick Links -->
+                <div>
+                    <h3 class="avenir-heavy mb-4" style="font-size: 11px; color: #7F7F7F;">QUICK LINKS</h3>
+                    <div class="space-y-2">
+                        <a href="#" class="avenir-regular text-white underline hover:text-gray-300 transition-colors duration-200 block" style="font-size: 17px;">Sand</a>
+                        <a href="#" class="avenir-regular text-white underline hover:text-gray-300 transition-colors duration-200 block" style="font-size: 17px;">Rock, Crushed Stone, Gravel, Granite</a>
+                        <a href="#" class="avenir-regular text-white underline hover:text-gray-300 transition-colors duration-200 block" style="font-size: 17px;">Topsoil, Fill Dirt, Clay</a>
+                        <a href="#" class="avenir-regular text-white underline hover:text-gray-300 transition-colors duration-200 block" style="font-size: 17px;">Landscape Materials</a>
+                        <a href="#" class="avenir-regular text-white underline hover:text-gray-300 transition-colors duration-200 block" style="font-size: 17px;">Calculators</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Horizontal Line -->
+            <div class="border-t mb-8" style="border-color: #F0F0F0;"></div>
+            
+            <!-- Bottom Section -->
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Social Media Icons -->
+                <div class="flex items-center gap-4 mb-4 md:mb-0">
+                    <a href="#" class="hover:opacity-80 transition-opacity duration-200">
+                        <img src="assets/navandfooter/fb.svg" alt="Facebook" class="h-8 w-8">
+                    </a>
+                    <a href="#" class="hover:opacity-80 transition-opacity duration-200">
+                        <img src="assets/navandfooter/in.svg" alt="LinkedIn" class="h-8 w-8">
+                    </a>
+                </div>
+                
+                <!-- Copyright -->
+                <div class="text-center md:text-right">
+                    <p class="avenir-regular text-white" style="font-size: 12px; color: #7F7F7F;">Copyright © Select Sand & Gravel. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+</body>
+</html>

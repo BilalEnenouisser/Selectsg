@@ -90,11 +90,15 @@ function initResponsiveNav() {
         const currentScrollY = window.scrollY;
         
         if (currentScrollY > 100) {
+            // On scroll: ensure solid white background for all screen sizes
             nav.classList.add('bg-white', 'shadow-md');
-            nav.classList.remove('bg-transparent');
+            nav.classList.remove('lg:bg-white/50');
         } else {
-            nav.classList.remove('bg-white', 'shadow-md');
-            nav.classList.add('bg-transparent');
+            // When at top: restore original responsive classes
+            // Keep bg-white for mobile, only change lg:bg-white/50 for desktop
+            nav.classList.remove('shadow-md');
+            nav.classList.add('lg:bg-white/50');
+            // Don't remove bg-white - it should stay for mobile
         }
         
         lastScrollY = currentScrollY;
